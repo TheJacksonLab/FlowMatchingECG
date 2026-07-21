@@ -19,11 +19,21 @@ This repository provides a minimal implementation of CFM-ECG together with data 
 - `temperature_condition_example.py` – example workflow for temperature-conditioned training and inference
 - `data/` – example datasets containing HOMO energies of sexi(3-methylthiophene) (ST3M) at multiple temperatures. See the paper for details of dataset generation.
 - `generate_CG_beads.py` – a script for constructing physical CG bead mappings used for ST3M.
-- `min.xyz` - an example energy minimum structure with the same connectivity and atomic indices used throughout this study
+- `min.xyz` - an example energy minimum structure with the same connectivity and atomic indices used throughout this study.
 
 ## Usage
 
-Run either example script after specifying the paths to your dataset.
+The example scripts are already configured to run with the provided datasets.
+
+To use a different temperature or CG resolution, modify the corresponding user parameters near the beginning of each script.
+
+Only the 18-bead CG features are included in this repository. To generate CG coordinates and pairwise distance features for the other CG representations (6, 12, 24, 30, and 36 beads), run
+
+```bash
+python generate_CG_beads.py
+```
+
+Then run either example script:
 
 ```bash
 python fixed_temperature_example.py
@@ -36,8 +46,10 @@ python temperature_condition_example.py
 ```
 
 ## Data format 
-homo.npy: (nsamples,) 
-features_CG.npy: (nsamples, nfeatures) containing nbeads*(nbeads-1)//2 distance features.
-coords_AA.npy: (nsamples, natoms, 3) containing Cartesian coordinates of AA structures for constructing different CG mappings.
+-homo.npy: (nsamples,) 
+-features_CG.npy: (nsamples, nfeatures) containing nbeads*(nbeads-1)//2 distance features. Generated from ``generate_CG_beads.py``
+-coords_AA.npy: (nsamples, natoms, 3) containing Cartesian coordinates of AA structures for constructing CG features from different CG mappings.
+
+
 
 See the comments in each script for the required input data format.
