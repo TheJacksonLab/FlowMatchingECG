@@ -18,7 +18,8 @@ This repository provides a minimal implementation of CFM-ECG together with data 
 - `fixed_temperature_example.py` – example workflow for training and inference at a fixed temperature
 - `temperature_condition_example.py` – example workflow for temperature-conditioned training and inference
 - `data/` – example datasets containing HOMO energies of sexi(3-methylthiophene) (ST3M) at multiple temperatures. See the paper for details of dataset generation.
-- `generate_CG_beads.py` – example script for constructing a CG bead mapping used for ST3M.
+- `generate_CG_beads.py` – a script for constructing physical CG bead mappings used for ST3M.
+- `min.xyz` - an example energy minimum structure with the same connectivity and atomic indices used throughout this study
 
 ## Usage
 
@@ -33,7 +34,6 @@ or
 ```bash
 python temperature_condition_example.py
 ```
-
 
 ## Data format 
 homo.npy: (nsamples,) 
