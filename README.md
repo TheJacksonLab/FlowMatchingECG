@@ -21,9 +21,10 @@ This repository provides a minimal implementation of CFM-ECG together with data 
 - `generate_CG_beads.py` – a script for constructing physical CG bead mappings used for ST3M.
 - `min.xyz` - an example energy minimum structure with the same connectivity and atomic indices used throughout this study.
 
+
 ## Usage
 
-The example scripts are already configured to run with the provided datasets.
+The example scripts are already configured to run with the provided datasets. The example runs are already configured with the parameters used by the paper.
 
 To use a different temperature or CG resolution, modify the corresponding user parameters near the beginning of each script.
 
@@ -45,11 +46,14 @@ or
 python temperature_condition_example.py
 ```
 
-## Data format 
--homo.npy: (nsamples,) 
--features_CG.npy: (nsamples, nfeatures) containing nbeads*(nbeads-1)//2 distance features. Generated from ``generate_CG_beads.py``
--coords_AA.npy: (nsamples, natoms, 3) containing Cartesian coordinates of AA structures for constructing CG features from different CG mappings.
 
+## Data format
 
+- `homo.npy`: array of shape `(n_samples,)` containing the HOMO energy for each atomistic configuration.
+
+- `features_CG_<n_beads>beads.npy`: array of shape `(n_samples, n_features)` containing all unique pairwise CG bead distances, where
+
+  ```text
+  n_features = n_beads * (n_beads - 1) // 2
 
 See the comments in each script for the required input data format.
