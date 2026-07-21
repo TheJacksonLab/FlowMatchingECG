@@ -58,57 +58,65 @@ python temperature_condition_example.py
 
 See the comments in each script for the required input data format.
 
+## Data organization
+
+The datasets are organized by temperature and by training/testing split:
+
+```text
 data/
 ├── 200K_training/
 │   ├── homo.npy
-│   ├── coords_AA_aligned.npy
+│   ├── coords_AA.npy
 │   └── CG/
 │       └── features_CG_18beads.npy
 │
 ├── 300K_training/
 │   ├── homo.npy
-│   ├── coords_AA_aligned.npy
+│   ├── coords_AA.npy
 │   └── CG/
 │       └── features_CG_18beads.npy
 │
 ├── 300K_testing/
 │   ├── homo.npy
-│   ├── coords_AA_aligned.npy
+│   ├── coords_AA.npy
 │   └── CG/
 │       └── features_CG_18beads.npy
 │
 ├── 400K_training/
 │   ├── homo.npy
-│   ├── coords_AA_aligned.npy
+│   ├── coords_AA.npy
 │   └── CG/
 │       └── features_CG_18beads.npy
 │
 ├── 400K_testing/
 │   ├── homo.npy
-│   ├── coords_AA_aligned.npy
+│   ├── coords_AA.npy
 │   └── CG/
 │       └── features_CG_18beads.npy
 │
 ├── 500K_training/
 │   ├── homo.npy
-│   ├── coords_AA_aligned.npy
+│   ├── coords_AA.npy
 │   └── CG/
 │       └── features_CG_18beads.npy
 │
 ├── 500K_testing/
 │   ├── homo.npy
-│   ├── coords_AA_aligned.npy
+│   ├── coords_AA.npy
 │   └── CG/
 │       └── features_CG_18beads.npy
 │
 ├── 600K_training/
 │   ├── homo.npy
-│   ├── coords_AA_aligned.npy
+│   ├── coords_AA.npy
 │   └── CG/
 │       └── features_CG_18beads.npy
 │
 └── 700K_training/
     ├── homo.npy
-    ├── coords_AA_aligned.npy
+    ├── coords_AA.npy
     └── CG/
         └── features_CG_18beads.npy
+```
+
+The 300 K, 400 K, and 500 K training and testing datasets each contain **100,000** configurations. The 200 K, 600 K, and 700 K training datasets each contain **19,991** configurations.
