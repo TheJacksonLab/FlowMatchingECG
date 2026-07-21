@@ -57,3 +57,58 @@ python temperature_condition_example.py
   n_features = n_beads * (n_beads - 1) // 2
 
 See the comments in each script for the required input data format.
+
+data/
+├── 200K_training/
+│   ├── homo.npy
+│   ├── coords_AA_aligned.npy
+│   └── CG/
+│       └── features_CG_18beads.npy
+│
+├── 300K_training/
+│   ├── homo.npy
+│   ├── coords_AA_aligned.npy
+│   └── CG/
+│       └── features_CG_18beads.npy
+│
+├── 300K_testing/
+│   ├── homo.npy
+│   ├── coords_AA_aligned.npy
+│   └── CG/
+│       └── features_CG_18beads.npy
+│
+├── 400K_training/
+│   ├── homo.npy
+│   ├── coords_AA_aligned.npy
+│   └── CG/
+│       └── features_CG_18beads.npy
+│
+├── 400K_testing/
+│   ├── homo.npy
+│   ├── coords_AA_aligned.npy
+│   └── CG/
+│       └── features_CG_18beads.npy
+│
+├── 500K_training/
+│   ├── homo.npy
+│   ├── coords_AA_aligned.npy
+│   └── CG/
+│       └── features_CG_18beads.npy
+│
+├── 500K_testing/
+│   ├── homo.npy
+│   ├── coords_AA_aligned.npy
+│   └── CG/
+│       └── features_CG_18beads.npy
+│
+├── 600K_training/
+│   ├── homo.npy
+│   ├── coords_AA_aligned.npy
+│   └── CG/
+│       └── features_CG_18beads.npy
+│
+└── 700K_training/
+    ├── homo.npy
+    ├── coords_AA_aligned.npy
+    └── CG/
+        └── features_CG_18beads.npy
